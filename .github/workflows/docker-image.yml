@@ -6,7 +6,7 @@ on:
   pull_request:
     branches: [ "main" ]
 env:
-  ES_VER: 9.3.0
+  ES_VER: 9.2.4
   IMAGE_NAME: minghealtomni/elasticsearch
 jobs:
   build:
