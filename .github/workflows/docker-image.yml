@@ -7,7 +7,7 @@ on:
     branches: [ "main" ]
 env:
   ES_VER: 9.2.4
-  IMAGE_NAME: minghealtomni/elasticsearch
+  IMAGE_NAME: masterid/elasticsearch
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -28,3 +28,5 @@ jobs:
         tags: ${{ env.IMAGE_NAME }}:${{ env.ES_VER }}
         build-args: |
           ES_VER=${{ env.ES_VER }}
+        cache-from: type=gha
+        cache-to: type=gha,mode=min
